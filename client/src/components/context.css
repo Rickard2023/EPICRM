@@ -1,0 +1,23 @@
+.theme-bg-dark {
+  background-color: rgb(2, 2, 46) !important;     
+}
+  
+.theme-bg-light {
+  background-color: rgb(255, 255, 255) !important;   
+}
+
+.theme-nav-dark {
+  background-color: rgb(55, 55, 112) !important;     
+}
+  
+.theme-nav-light {
+  background-color: rgb(255, 255, 255) !important;   
+}
+
+.theme-font-dark {
+    color : white !important;
+}
+.theme-font-light {
+    color: black;
+    box-shadow: 8px;
+}

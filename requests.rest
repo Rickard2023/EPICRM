@@ -1,0 +1,24 @@
+http://localhost:3000/
+// Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTYwMTc1OTN9.rEO9zsoJZho0USjXPc68ZYRpNQyoyDbyEZw_JhRl2Zc
+
+###
+
+GET http://localhost:3000/users
+
+###
+
+http://localhost:3000/users/logout
+
+###
+
+POST http://localhost:3000/users/create
+{
+    "email": "awi@fakemail.com",
+    "password": "1234",
+    "username": "Poto94",
+    "firstname": "awi",
+    "lastname": "awo",
+    "dob": "18-05-2000",
+    "pfp": "n/a",
+    "usertype": "basic"
+}

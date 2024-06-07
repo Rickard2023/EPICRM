@@ -1,0 +1,38 @@
+
+.pill-button-light {
+    background-color: rgb(2, 2, 46) !important;   
+    border: none;
+    color: white !important;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}  
+
+.pill-button-dark {
+    background-color: #ddd;
+    border: none;
+    color: black !important;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}  
+
+.profile-pic {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.profile-pic :hover{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}

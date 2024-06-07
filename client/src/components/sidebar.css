@@ -1,0 +1,29 @@
+
+.user-list-bg {
+    background-color: lightcyan !important;
+}
+
+.card-shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button-align {
+    text-align: center;
+}
+
+.alert-completed {
+    background-color: green;
+}
+.alert-scheduled {
+    background-color: wheat;
+}
+.alert-deleted {
+    background-color: red;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;            /* Footer height */
+}
