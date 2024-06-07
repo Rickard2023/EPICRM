@@ -11,6 +11,8 @@ from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import { useNavigate  } from 'react-router-dom';
 import Home from './Home';
+import { context } from '../App';
+
 function handleUserInfo() 
 {
     const email = document.getElementById('login-email').value;
@@ -35,6 +37,7 @@ function handleUserInfo()
             .then(data => {                   
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("id", data.user._id);
+
                 window.location.reload();
             })
 

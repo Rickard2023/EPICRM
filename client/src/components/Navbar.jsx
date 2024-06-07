@@ -14,7 +14,7 @@ import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faFlagUsa } from '@fortawesome/free-solid-svg-icons';
-
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function UserNavbar() {
 
@@ -22,6 +22,7 @@ export default function UserNavbar() {
 
   const firstname = context.firstname;
   const lastname = context.lastname;
+  const isAdmin = context.isAdmin;
 
   function logOut()
   {
@@ -63,7 +64,7 @@ export default function UserNavbar() {
   }
 
   let c = context.unassignedAlerts;
-
+  console.log(isAdmin);
 
   return (
     <nav id="main-navbar" class="theme navbar navbar-expand-lg navbar-light bg-white">
@@ -91,7 +92,12 @@ export default function UserNavbar() {
               loading="lazy"
             />
         </a>
-
+        {isAdmin && 
+          <button className='btn btn-primary' onClick={() => navigate("/client-create")}>
+            <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+            <span style={{color: 'white', marginLeft: '10px'}}>crea nuovo utente</span>
+          </button>         
+        }
 
 
         <ul class="navbar-nav ms-auto d-flex flex-row">

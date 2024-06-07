@@ -41,9 +41,11 @@ function App() {
       console.log(userInfo);
       context.firstname = userInfo.firstname;
       context.lastname = userInfo.lastname;
+      context.isAdmin = userInfo.usertype == "admin" ? true : false;
     }
     getUser();
   }
+
 
   context.userID = id;
   context.theme = "dark";

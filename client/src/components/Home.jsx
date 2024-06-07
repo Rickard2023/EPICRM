@@ -68,6 +68,8 @@ function Home(props) {
         })
         .then(data => {     
           console.log(data);     
+          alert("Richiesta inoltrata correttamente. Verrai contattato da un nostro consulente per fissare un appuntamento e risolvere l'inconveniente.");
+          document.getElementById('userMsg').value = "";
         })
     }
     catch (err) {

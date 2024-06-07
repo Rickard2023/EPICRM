@@ -22,6 +22,10 @@ import { Dropdown } from 'react-bootstrap';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./clientcreate.css";
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const MAX_INFO_BUTTONS = 3;
 const SECTION_PERSONAL_INFO = 0;
@@ -78,6 +82,7 @@ export default function ClientCreate() {
     section = setSection(x);
   }
 
+  const navigate = useNavigate();
 
   const serviceName = ["Nessuno", "Privacy", "Antiriciclaggio", "Whistleblowing", "Customer care"];
   const [firstname, setFirstname] = useState("");
@@ -204,6 +209,7 @@ export default function ClientCreate() {
               .then(data => {   
                 console.log(data);
                 clearAllFields();
+                Navigate("/");
               })
              }    
 
@@ -352,11 +358,14 @@ export default function ClientCreate() {
                 </MDBCardBody>             
           }
 
+          <span>
+          <button type='button'  style={{padding: '4px', maxWidth: '200px'}} className='btn btn-primary'  onClick={() => navigate(-1)}><FontAwesomeIcon icon={faArrowLeft} style={{marginRight:'10px'}}></FontAwesomeIcon>INDIETRO</button>    
           {
               section === SECTION_SUMMARY && 
-
-              <MDBBtn className='w-100 mb-4' size='md' onClick={handleClientCreation}>Create user</MDBBtn>
+              <MDBBtn className='btn-success' style={{padding: '4px', width: '200px', alignContent: 'right', float: 'right'}} size='md' onClick={handleClientCreation}>CREA</MDBBtn>
           }
+          </span>
+
         </MDBCard>
 
       </MDBCol>
